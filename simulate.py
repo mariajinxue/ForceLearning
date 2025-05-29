@@ -26,6 +26,7 @@ def f(t, freq = 2):
 plt.figure(10); plt.clf();
 t = np.arange(30000) * 0.1 
 plt.plot(t, f(t))
+plt.show()
 
 
 #%% Training 
@@ -34,11 +35,13 @@ net = Network(alpha = 10, n=500)
 net.run(30000, save=True, train = f)
 plt.figure(1); plt.clf();
 net.plot(f = f)
+plt.show()
 
 #%% Generation
 
 net.run(5000, save=True)
 plt.figure(2); plt.clf();
 net.plot()
+plt.show()
 
 
